@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.space {
+  height: 100px;
+}
+
+.form-register {
+  width: 100vw;
+  color: #95D600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-register p {
+  width: 300px;
+  margin: 10px;
+  display: flex;
+  justify-content: left;
+  text-align: left;
+}
+.form-register input {
+  width: 300px;
+  outline: none;
+  border-radius: 5px;
+}
+.form-register input:focus {
+  outline: 2px solid #95D600;
+  border-radius: 5px;
+}
+.form-register .title-register {
+  color: #95D600;
+  margin: 10px;
+  padding: 10px;
+}
+.form-register .btn-register {
+  background-color: #95D600;
+  width: 100px;
+  border-radius: 2px;
+  margin: 10px;
+  padding: 10px;
+}
+.form-register .btn-register:hover {
+  background-color: black;
+  color: #95D600;
+  border: 1px solid #95D600;
+}/*# sourceMappingURL=register-styles.css.map */

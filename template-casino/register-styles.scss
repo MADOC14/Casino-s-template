@@ -1,0 +1,64 @@
+//root:
+//COLORS
+$fontColorFocus: #95D600;
+$btn-card-game-color:#95D600;
+$fontColorNormal: black;
+$font-color-btn-card: #e61d20b8;
+$bg-card-games:#e61d20;
+$bg-body-card-games: black;
+$btn-cookies: gray;
+$btn-cookies-hover: black;
+//FONTS
+$fontfamily: "Libre Franklin", sans-serif;
+
+* {
+margin: 0;
+padding: 0;    
+}
+body {
+    font-family: $fontfamily;
+}
+
+.space {
+    height: 100px;
+}
+.form-register {
+    width: 100vw;
+    color: $fontColorFocus;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        width: 300px;
+        margin: 10px;
+        display: flex;
+        justify-content: left;
+        text-align: left;
+    }
+    input {
+        width: 300px;
+        outline: none;
+        border-radius: 5px;
+    }
+    input:focus {
+        outline: 2px solid $fontColorFocus;
+        border-radius: 5px;
+        }
+    .title-register{
+        color: $fontColorFocus;
+        margin: 10px;
+        padding: 10px;
+    }
+    .btn-register {
+        background-color: $btn-card-game-color;
+        width: 100px;
+        border-radius: 2px;
+        margin: 10px;
+        padding: 10px;
+    }
+    .btn-register:hover {
+        background-color: $bg-body-card-games;
+        color: $fontColorFocus;
+        border: 1px solid $fontColorFocus;
+    }
+}

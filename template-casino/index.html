@@ -11,13 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/501fb51e18.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="body">
     <div class="container-grid">
         <div class="aviso-cookies " id="aviso-cookies">
             <!-- <img src="images/cookie.png" class="galleta" alt="galleta"> -->
-            <h3 class="titulo">Cookies</h3>
+            <h3 class="titulo">Aviso de Cookies</h3>
             <p class="parrafo">Utilizamos cookies propias y de terceros para obtener datos estadísticos de la navegación de nuestros usuarios y mejorar nuestros servicios. Si acepta o continúa navegando, consideramos que acepta su uso. Puede cambiar la configuración u obtener más información <a href="aviso-cookies.html" class="enlace">aquí</a>.</p>
-            <button class="boton" id="btn-aceptar-cookies">Deacuerdo</button>
+            <h3 class="titulo">Este sitio es para +18.</h3>
+            <p>Declaro que soy mayor de edad al aceptar el aviso de cookies.</p>
+            <button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
             </div>
             <div class="fondo-aviso-cookies " id="fondo-aviso-cookies">
             </div>
@@ -31,30 +33,30 @@
                           LOG IN
                         </button>
                     </div></li>
-                    <li><a href="">REGISTER</a></li>
+                    <li><a href="register.html">REGISTER</a></li>
                 </ul>
             </div>
             
-            <div class="logo"><img src="./images/logo.png" alt=""></div>
+            <div class="logo"><a href="index.html"><img src="./images/logo.png" alt=""></a></div>
             
             <div class="navbar menu-1 row">
                         <input type="text" onclick ="muestraLista()" name="buscador" placeholder="Buscar..." id="buscador" class="buscador"> 
                         <ul class="listArticulos" id="listArticulos">
-                            <li  class="articulo"><a href="">Register</a></li>
-                            <li  class="articulo"><a href="">Index</a></li>
+                            <li  class="articulo"><a href="register.html">Register</a></li>
+                            <li  class="articulo"><a href="index.html">Index</a></li>
                             <li  class="articulo"><a href="">Games</a></li>
                             <li  class="articulo"><a href="">Products</a></li>
                             <li  class="articulo"><a href="">Comunity</a></li>
                             <li  class="articulo"><a href="">Privacity</a></li>
                             <li  class="articulo"><a href="">Game of the day</a></li>
                             <li  class="articulo"><a href="">Jackpot</a></li>
-                            <li  class="articulo"><a href="">Turns</a></li>
+                            <li  class="articulo"><a href="">Tournaments</a></li>
                             <li  class="articulo"><a href="">Poker</a></li>
-                            <button onclick="ocultarLista()" class="btn-ocultar-buscador">Hidden</button>
+                            
                         </ul>
                     
                 <ul class="li-menu">
-                    <a href="" class="menu-big-letter">Index</a>
+                    <a href="index.html" class="menu-big-letter">Index</a>
                     <li><a href="">Games</a></li>
                     <li><a href="">Products</a></li>
                     <li><a href="">Privacity</a></li>                    
@@ -68,7 +70,7 @@
                     <li><a href="">Poker</a></li>
                     <div class="separador"></div>
                     <li><a href="">Comunity</a></li>
-                    <li><a href="">Turns</a></li>
+                    <li><a href="">Tournaments</a></li>
                 </ul>
             </div>
             
@@ -76,24 +78,23 @@
                 <div class="modal" id="modal1" data-animation="slideInOutLeft">
                     <div class="modal-dialog">
                       <header class="modal-header">
-                        The header of the first modal
+                       <h1> Log in</h1>
                         <button class="close-modal" aria-label="close modal" data-close>
                           ✕  
                         </button>
                       </header>
                       <section class="modal-content">
-                        <p><strong>Press ✕, ESC, or click outside of the modal to close it</strong></p>
-                        <form action="" method="POST">
-                            <label for="correo">Correo:</label>
-                            <input type="text" class="correo" id="correo" name="correo">
-                            <label for="codigo-postal">Contraseña:</label>
-                            <input type="password" name="password" id="pass" class="pass">
-                            <button type="submit">Entrar</button>
+                        <form action="" method="POST" class="form-register col" id="register">
+                            <label for="correo"><p>Correo:</p></label>
+                            <input type="text" class="correo" id="mail" name="mail" required>
+                            <label for="codigo-postal"><p>Contraseña:</p></label>
+                            <input type="password" name="password" id="pass" class="pass" required>
+                            <button class="btn-login" type="submit">Entrar</button>
 
                         </form>
                       </section>
                       <footer class="modal-footer">
-                        The footer of the first modal
+                        <a href="forgot-password.html">Forgot your password?</a>
                       </footer>
                     </div>
                   </div>
@@ -168,6 +169,24 @@
                 </div>
             </div>
           </div>
+    </div>
+
+    <div class="footer">
+        <div class="cont-foot">
+            <div class="logo-foot"><img src="images/logo.png" alt="logo" class="logo-img-foot"></div>
+            <div class="link-foot">
+                
+            <a href="">About us</a>
+            <a href="">Bond terms</a>
+            <a href="">Terms and Conditions</a>
+            <a href="">Work whith us</a>
+            <a href="">Lisenced game</a>
+            </div>
+            <div class="payment-foot">
+                <img src="./images/foot/paypal.png" alt="paypal" class="payment">
+                <img src="./images/foot/visa.png" alt="visa" class="payment">
+            </div>
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>

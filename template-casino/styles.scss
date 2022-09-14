@@ -6,6 +6,9 @@ $fontColorNormal: black;
 $font-color-btn-card: #e61d20b8;
 $bg-card-games:#e61d20;
 $bg-body-card-games: black;
+$btn-cookies: gray;
+$btn-cookies-hover: black;
+$focus-inputs: rgb(2, 17, 18);
 //FONTS
 $fontfamily: "Libre Franklin", sans-serif;
 
@@ -78,7 +81,7 @@ body {
   
   .aviso-cookies .boton {
     width: 100%;
-    background-color: white;
+    background-color: $btn-cookies;
     border: none;
     color: white;
     text-align: center;
@@ -92,7 +95,7 @@ body {
   }
   
   .aviso-cookies .boton:hover {
-    background-color: black;
+    background-color: $btn-cookies-hover;
   }
   
   .aviso-cookies .enlace {
@@ -126,6 +129,10 @@ body {
     padding: 10px;
     line-height: 30px;
     gap: 20px;
+    color: white;
+    a {
+        color: $fontColorFocus;
+    }
   }
   .politica-cookies h1 {
     padding: 10px;
@@ -196,7 +203,14 @@ body {
   border: none;
   margin-right: 15px;
   width: 200px;
+  outline:none;
+  border-radius: 5px;
 }
+.buscador:focus {
+  outline: 2px solid $focus-inputs;
+  border-radius: 5px;
+}
+
 
 .btn-buscador {
   background-color: white;
@@ -211,8 +225,8 @@ body {
   width: 200px;
   z-index: 1;
   position: absolute;
-  top: 160px;
-  left: 710px;
+  top: 150px;
+  left: 670px;
   background-color: black;
 }
 .listArticulos li a{
@@ -270,14 +284,51 @@ button {
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  background-color: white;
+  background-color: $bg-body-card-games;
   cursor: pointer;
   visibility: hidden;
   opacity: 0;
   transition: all 0.35s ease-in;
-  color: black;
+  color: $fontColorFocus;
+  font-family: $fontfamily;
+  display: flex;
+
 }
 
+.form-register {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  width: 300px;
+  margin: 10px;
+  p {
+    width: 300px;
+    margin: 10px;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
+input {
+  outline: none;
+  border-radius: 5px;
+}
+input:focus {
+  outline: 2px solid $fontColorFocus;
+  border-radius: 5px;
+  }
+}
+.btn-login {
+  margin: 10px;
+  border-radius: 2px;
+  background-color: $btn-cookies;
+  margin-left:  calc(50% - 50px);
+  width: 100px;
+  &:hover {
+    background-color: $bg-body-card-games;
+    color: $fontColorFocus;
+    border: 1px solid $fontColorFocus;
+  }
+}
 .modal.is-visible {
   visibility: visible;
   opacity: 1;
@@ -300,13 +351,22 @@ button {
 .modal-header,
 .modal-footer {
   background: var(--lightgray);
+  a {
+    width: 300px;
+   margin-left: calc(30% - 30px);
+  }
 }
 
 .modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  h1 {
+    text-align: center;
+    width: 100%;
+  }
 }
+
 
 .modal-header .close-modal {
   font-size: 1.5rem;
@@ -315,7 +375,9 @@ button {
 .modal p + p {
   margin-top: 1rem;
 }
-
+.close-modal {
+  color: $fontColorFocus;
+}
 /* ANIMATIONS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 [data-animation] .modal-dialog {
@@ -503,7 +565,54 @@ button {
     }
 
 }
-
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .cont-foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logo-foot{
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      background-color: rgba(128, 128, 128, 0.635);
+      left: 20px;
+      .logo-img-foot {
+      width: 100px;
+      margin:5px;
+     } 
+    }
+    .link-foot {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      a {
+        color: $fontColorFocus;
+        font-family: $fontfamily;
+        margin: 10px;
+        padding: 10px;
+      }
+      }
+      .payment-foot {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        
+        .payment {
+          width: 100px;
+        }
+    }
+  }
+}
 @media (max-width: 850px) {
     //HEADER
   .logo {
@@ -535,5 +644,11 @@ button {
     // .card-game {
     
     // }
+  }
+  .link-foot {
+    a {
+      margin: 0.5rem;
+      font-size: 0.5rem;
+    }
   }
 }

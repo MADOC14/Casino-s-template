@@ -21,14 +21,18 @@ document.addEventListener("keyup", e => {
  })
  
  //OCULTAR MOSTRAR LISTA BUSCADOR
- 
+  const lista = document.getElementById("listArticulos");
+  const body = document.getElementById("body");
  function muestraLista() {
-         document.getElementById("listArticulos").style.display = 'block'
+         //document.getElementById("listArticulos")
+         lista.style.display = 'block'
   }
  
-  function ocultarLista() {
-     document.getElementById("listArticulos").style.display = 'none'
-  }
+  
+     body.addEventListener('mouseup', () => {
+      lista.style.display = 'none'
+     })
+  
  
  //AVISO COOKIES
  
@@ -79,8 +83,6 @@ document.addEventListener("keyup", e => {
      document.querySelector(".modal.is-visible").classList.remove(isVisible);
    }
  });
- 
- //VALIDACION FORM LOG IN
  
  
  
